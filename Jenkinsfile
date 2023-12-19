@@ -11,7 +11,7 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/kushgudhka/springCore-final.git'
                 dir('01-Spring-Boot-Overview/01-Spring-Boot-Basics') {
-                    bat "mvn clean test"
+                    bat "mvn clean test" 
                 }
             }
         }
