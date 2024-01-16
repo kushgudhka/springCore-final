@@ -8,13 +8,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(MockitoExtension.class)
 class FunRestControllerTest {
+    FunRestController funRestController = new FunRestController();
 
     @Test
     void testHello(){
-        FunRestController funRestController = new FunRestController();
-        String result = funRestController.sayHello();
 
+        String result = funRestController.sayHello();
         assertEquals("Hello Kush!",result);
+    }
+
+    @Test
+    void testWorkout(){
+        String result = funRestController.getDailyWorkout();
+        assertEquals("Run 60KM!",result);
     }
 
 }
